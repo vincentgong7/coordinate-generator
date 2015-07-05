@@ -34,7 +34,6 @@ public class CoodinatesGenerator {
 
 	public CoodinatesGenerator(double lat, double longi, double R, double r,
 			double interval) {
-		// TODO Auto-generated constructor stub
 		this.lat = lat;
 		this.longi = longi;
 		this.R = R;
