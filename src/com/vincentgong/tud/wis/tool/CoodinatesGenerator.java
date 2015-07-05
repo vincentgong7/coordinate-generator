@@ -3,7 +3,6 @@ package com.vincentgong.tud.wis.tool;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * @author vincentgong
  */
@@ -12,7 +11,7 @@ public class CoodinatesGenerator {
 	public static void main(String[] args) {
 		double lat = 30.657938;
 		double longi = 104.065590;
-		double R = 11132*4;
+		double R = 11132 * 4;
 		double r = 11132;
 		double interval = r;
 		CoodinatesGenerator cg = new CoodinatesGenerator(lat, longi, R, r,
@@ -29,7 +28,7 @@ public class CoodinatesGenerator {
 	private double interval;
 	public static double LATITUDE_SECOND_PER_METER = 1 / 30.9;
 	private static double EARTH_RADIUS = 6378.137 * 1000;
-    private static final double PI = 3.14159265;
+	private static final double PI = 3.14159265;
 	private List<Coordinate> list;
 
 	public CoodinatesGenerator(double lat, double longi, double R, double r,
@@ -61,21 +60,23 @@ public class CoodinatesGenerator {
 			// finale: adding to the list
 			Coordinate coordinate = new Coordinate(absLat, absLongi, rad);
 			this.list.add(coordinate);
-			
-//			System.out.println(absLat + "," + absLongi);
+
+			// System.out.println(absLat + "," + absLongi);
 		}
 	}
 
 	private double transCoordinateX(double x, double lat) {
 		double radLat = rad(lat);
-		double LongitudeSecondPerMeter = (360*3600) / (2*CoodinatesGenerator.PI*CoodinatesGenerator.EARTH_RADIUS*Math.cos(radLat));
-		double relativeLongitude = (x * LongitudeSecondPerMeter)/3600;
+		double LongitudeSecondPerMeter = (360 * 3600)
+				/ (2 * CoodinatesGenerator.PI
+						* CoodinatesGenerator.EARTH_RADIUS * Math.cos(radLat));
+		double relativeLongitude = (x * LongitudeSecondPerMeter) / 3600;
 		double absLongitude = relativeLongitude + this.longi;
 		return absLongitude;
 	}
 
 	private double transCoordinateY(double y) {
-		double relativeLat = (y * CoodinatesGenerator.LATITUDE_SECOND_PER_METER)/3600;
+		double relativeLat = (y * CoodinatesGenerator.LATITUDE_SECOND_PER_METER) / 3600;
 		double absLat = relativeLat + lat;
 		return absLat;
 	}
@@ -89,7 +90,7 @@ public class CoodinatesGenerator {
 			System.out.println(c.toString());
 		}
 	}
-	
+
 	public void iterateList(List<Coordinate> list) {
 		for (Coordinate c : list) {
 			System.out.println(c.toString());
