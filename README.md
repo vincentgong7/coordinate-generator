@@ -9,10 +9,10 @@ Usage example:
 		double lat = 30.657938; //the center of the target circle
 		double longi = 104.065590;
 		
-		double R = 11132*4; //the radius of the target circle area
-		double r = 11132; //the radius of the small circle area
+		double R = 11132*4; //the radius of the target circle area, in meters
+		double r = 11132; //the radius of the small circle area, in meters
 		
-		//the parameter for coverage, 0<interval<=r, smaller interval leads to more small circles but better coverage, vice versa
+		//the parameter for coverage, 0<interval<=r, the smaller interval, the more small circles it will generate, but better coverage, vice versa
 		double interval = r; //default = r
 		
 		//initialize the algorithm
