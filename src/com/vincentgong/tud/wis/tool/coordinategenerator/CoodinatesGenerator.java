@@ -1,4 +1,4 @@
-package com.vincentgong.tud.wis.tool;
+package com.vincentgong.tud.wis.tool.coordinategenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,14 @@ public class CoodinatesGenerator {
 		this.list = new ArrayList<Coordinate>();
 	}
 
-	private void process() {
+	public void process() {
+		
+		if (this.R <= this.r) {// if the given R is shorter than r
+			Coordinate coord = new Coordinate(this.lat, this.longi, this.R);
+			this.list.add(coord);
+			return;
+		}
+
 		CircleCalculator cc = new CircleCalculator(R, r, interval);
 		List<Coord> basicCoordsList = cc.process();
 		for (Coord c : basicCoordsList) {

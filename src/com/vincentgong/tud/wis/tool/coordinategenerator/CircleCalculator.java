@@ -1,4 +1,4 @@
-package com.vincentgong.tud.wis.tool;
+package com.vincentgong.tud.wis.tool.coordinategenerator;
 
 import java.util.ArrayList;
 import java.util.HashSet;

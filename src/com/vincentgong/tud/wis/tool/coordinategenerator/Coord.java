@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.vincentgong.tud.wis.tool;
+package com.vincentgong.tud.wis.tool.coordinategenerator;
 
 /**
  * @author vincentgong
