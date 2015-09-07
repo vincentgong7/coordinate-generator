@@ -1,4 +1,4 @@
-package com.vincentgong.tud.wis.tool.demo.copy;
+package com.vincentgong.tud.wis.tool.coordinategenerator.demo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
