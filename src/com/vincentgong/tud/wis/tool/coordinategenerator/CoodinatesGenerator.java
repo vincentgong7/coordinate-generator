@@ -42,7 +42,7 @@ public class CoodinatesGenerator {
 	}
 
 	public void process() {
-		
+
 		if (this.R <= this.r) {// if the given R is shorter than r
 			Coordinate coord = new Coordinate(this.lat, this.longi, this.R);
 			this.list.add(coord);
